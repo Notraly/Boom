@@ -26,6 +26,9 @@ StateController::StateController()  {
 void StateController::changeState(StateName name){
     currentState = states[name];
 }
+void StateController::cLoop(){
+  currentState->sLoop(); // accéder à un élément de l'objet pointé
+}
 // --------------------------------------------------------- Getteurs/Sertteurs
 
 // ------------------------------------------------------------------ Destuctor
